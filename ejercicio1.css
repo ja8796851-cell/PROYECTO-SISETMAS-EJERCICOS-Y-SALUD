@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+button{
+    background-color: rgb(29, 165, 165);
+    padding: 45px 55px;
+    color: aliceblue;
+    border: 5px solid black;
+    border-radius: 19px;
+    font-size: 4em;
+}
+button:hover{
+    background-color: aliceblue;
+    color:rgb(29, 165, 165) ;
+}
