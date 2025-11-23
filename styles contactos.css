@@ -1,0 +1,63 @@
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: "Poppins", sans-serif;
+    background: #4B5A5F;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 45px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+.Todo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.Cuadros {
+    width: 260px;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.Cuadros:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.Cuadros h2 {
+    margin: 0 0 10px;
+    color: #3d3d3d;
+}
+
+.Cuadros p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contactos {
+    display: inline-block;
+    background:  #D0C1A7;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background .25s ease, transform .25s ease; /*tranciones*/
+}
+
+.contactos:hover {
+    background: #A46424;;
+    transform: scale(1.05);
+}

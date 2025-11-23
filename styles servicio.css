@@ -1,0 +1,46 @@
+#entrenadoras{
+    text-decoration: none;
+    color: rgb(80, 79, 79);
+    font-size: 30px;
+}
+/* === ESTILOS GENERALES === */ body { margin: 0; padding: 0; font-family: "Poppins", sans-serif; background: #0d0f1a; color: #fff; }
+
+header { text-align: center; padding: 50px 20px; 
+    background: linear-gradient(135deg, #532805, #030852); 
+    box-shadow: 0 0 25px rgb(156, 80, 18); }
+
+header h1 { font-size: 2.8rem; margin: 0; animation: glow 2s ease-in-out infinite alternate; }
+header img{
+    margin: 0;
+    padding: 50px 20px;
+}
+
+header p { font-size: 1.2rem; opacity: 0.9; }
+
+/* === CONTENEDOR DE TARJETAS === */ .team { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 60px 20px; }
+
+/* === TARJETAS FUTURISTAS === */ .card { width: 330px; background: rgba(196, 137, 137, 0.05); border-radius: 20px; padding: 25px; backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 25px rgba(184, 114, 35, 0.562); transition: 0.4s ease; opacity: 0; animation: slideUp 1.2s forwards; }
+
+.card:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 0 35px rgba(202, 117, 67, 0.801); }
+
+/* === IMAGENES === */ .img-box { width: 100%; height: 260px; overflow: hidden; border-radius: 15px; margin-bottom: 15px; }
+
+.img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+
+.card:hover img { transform: scale(1.1); }
+
+/* === TEXTOS === */ .card h2 { margin: 10px 0 5px; font-size: 1.6rem; color: #806043; }
+
+.rol { font-weight: 600; color: #5759f8; margin-bottom: 10px; }
+
+.info { list-style: none; padding: 0; margin: 15px 0; }
+
+.info li { margin-bottom: 6px; font-size: 0.95rem; }
+
+.desc { opacity: 0.85; line-height: 1.5rem; }
+
+/* === FOOTER === */ footer { text-align: center; padding: 25px; background: #393a7c; margin-top: 40px; box-shadow: 0 -5px 20px rgba(219, 171, 11, 0.836); }
+
+/* === ANIMACIONES === */ @keyframes glow { from { text-shadow: 0 0 10px #fff; } to { text-shadow: 0 0 25px #0f3868; } }
+
+@keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }

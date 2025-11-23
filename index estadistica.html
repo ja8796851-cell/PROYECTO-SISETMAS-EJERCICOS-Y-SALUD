@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles estadistica.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Estadísticas de Ejercicio</h1>
+    </header>
+
+    <section class="resumen">
+        <h2>Resumen Semanal</h2>
+        <div class="estadisticas">
+            <div class="dato">
+                <h3>Días de Ejercicio</h3>
+                <p id="dias">0</p>
+            </div>
+            <div class="dato">
+                <h3>Tiempo Total (min)</h3>
+                <p id="tiempo">0</p>
+            </div>
+            <div class="dato">
+                <h3>Calorías Quemadas</h3>
+                <p id="calorias">0</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="registro">
+        <h2>Registro Diario</h2>
+        <form id="registro-form">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label for="ejercicio">Ejercicio:</label>
+            <input type="text" id="ejercicio" name="ejercicio">
+
+            <label for="duracion">Duración (min):</label>
+            <input type="number" id="duracion" name="duracion">
+
+            <label for="calorias-quemadas">Calorías Quemadas:</label>
+            <input type="number" id="calorias-quemadas" name="calorias-quemadas">
+
+            <button type="submit">Añadir Registro</button>
+        </form>
+    </section>
+
+    <section class="grafico">
+        <h2>Gráfico de Progreso</h2>
+        <canvas id="miGrafico"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mis Estadísticas de Ejercicio</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>

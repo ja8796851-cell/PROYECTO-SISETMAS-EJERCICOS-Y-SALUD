@@ -1,0 +1,593 @@
+/* PALETA */
+:root {
+    --blue-gray: #4B5A5F;
+    --gold-sand: #D7A66A;
+    --beige: #D0C1A7;
+    --deep-black: #2E2E29;
+    --burnt-brown: #A46424;
+    --light-bg: #f4f2ef;
+    --smooth: ease-in-out 0.3s;
+    --quick: ease-in-out 0.2s;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--light-bg);
+    color: var(--deep-black);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* SCROLLBAR MODERNO */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--gold-sand);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+/* NAVBAR – sticky + blur */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(75, 90, 95, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: var(--smooth);
+}
+
+.navbar:hover {
+    background: rgba(75, 90, 95, 1);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: var(--quick);
+}
+
+.navbar a:hover {
+    color: var(--gold-sand);
+    transform: scale(1.05);
+}
+
+/* LOGO */
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* LOGIN BUTTON – glow */
+.login-btn {
+    padding: 10px 22px;
+    background: var(--gold-sand);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--smooth);
+    box-shadow: 0 0 10px rgba(215, 166, 106, 0.5);
+}
+
+.login-btn:hover {
+    background: var(--burnt-brown);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(164, 100, 36, 0.8);
+}
+
+/* HERO – con fade-in y sombra suave */
+.hero {
+    height: 85vh;
+    background: linear-gradient(
+        rgba(206, 203, 203, 0.5), 
+        rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=2070&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(1.05); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* HERO TEXT */
+.hero-content h1 {
+    font-size: 3.3rem;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+}
+
+/* CTA BUTTON – elegante + brillo */
+.btn-cta {
+    padding: 13px 35px;
+    background: var(--gold-sand);
+    border: none;
+    border-radius: 40px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--smooth);
+    box-shadow: 0 5px 20px rgba(215,166,106,0.5);
+}
+
+.btn-cta:hover {
+    background: var(--burnt-brown);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(164,100,36,0.8);
+}
+
+/* SERVICES – glass cards */
+.services {
+    padding: 70px 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.card a{
+    color: inherit;
+    text-decoration: none;
+}
+.card{
+    
+    width: 300px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+    border-bottom: 6px solid var(--burnt-brown);
+    transition: var(--smooth);
+    text-align: center;
+}
+
+.card h3 {
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: var(--blue-gray);
+    font-weight: 700;
+}
+
+.card p {
+    color: #444;
+    font-weight: 400;
+}
+
+/* HOVER EFECTO PRO */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--deep-black);
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+/* ============================= */
+/*            LOADER             */
+/* ============================= */
+
+.loader-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeOut 1.5s ease forwards 2.5s;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid var(--beige);
+    border-top-color: var(--burnt-brown);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+
+/* ============================= */
+/*        SECCIÓN DE COMPRAS     */
+/* ============================= */
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+  padding: 10px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+.desc {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 600;
+  color: #10b981;
+  margin-bottom: 15px;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.ver {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.ver:hover {
+  background: #d1d5db;
+}
+
+.comprar {
+  background:  rgba(164,100,36,0.8);
+  color: white;
+}
+
+.comprar:hover {
+  background:  rgba(164,100,36,0.8);
+}
+
+/* ============================= */
+/*        SECCIÓN PREMIUM        */
+/* ============================= */
+
+.premium {
+    background: linear-gradient(
+        to right,
+        var(--blue-gray),
+        var(--deep-black)
+    );
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.premium h2 {
+    font-size: 2.8rem;
+}
+
+.btn-premium {
+    padding: 14px 40px;
+    background: var(--gold-sand);
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: var(--smooth);
+}
+
+.btn-premium:hover {
+    background: var(--burnt-brown);
+    color: white;
+    transform: scale(1.07);
+}
+
+/* ============================= */
+/*         LOGIN PAGE CSS        */
+/* ============================= */
+
+.login-container {
+    width: 350px;
+    margin: 120px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    color: var(--blue-gray);
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.login-submit {
+    width: 100%;
+    padding: 12px;
+    background: var(--gold-sand);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: var(--smooth);
+}
+
+.login-submit:hover {
+    background: var(--burnt-brown);
+}
+
+.login-link {
+    display: block;
+    margin-top: 15px;
+    color: var(--blue-gray);
+    text-decoration: none;
+}
+/* ============================= */
+/*            LOADER             */
+/* ============================= */
+
+.loader-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeOut 1.5s ease forwards 2.5s;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid var(--beige);
+    border-top-color: var(--burnt-brown);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+
+/* ============================= */
+/*        SECCIÓN DE VIDEOS      */
+/* ============================= */
+
+.video-section {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 2.5rem;
+    color: var(--blue-gray);
+}
+
+.video-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.video-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: var(--smooth);
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.video-card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* ============================= */
+/*        SECCIÓN PREMIUM        */
+/* ============================= */
+
+.premium {
+    background: linear-gradient(
+        to right,
+        var(--blue-gray),
+        var(--deep-black)
+    );
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.premium h2 {
+    font-size: 2.8rem;
+}
+
+.btn-premium {
+    padding: 14px 40px;
+    background: var(--gold-sand);
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: var(--smooth);
+}
+
+.btn-premium:hover {
+    background: var(--burnt-brown);
+    color: white;
+    transform: scale(1.07);
+}
+
+/* ============================= */
+/*         LOGIN PAGE CSS        */
+/* ============================= */
+
+.login-container {
+    width: 350px;
+    margin: 120px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    color: var(--blue-gray);
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.login-submit {
+    width: 100%;
+    padding: 12px;
+    background: var(--gold-sand);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: var(--smooth);
+}
+
+.login-submit:hover {
+    background: var(--burnt-brown);
+}
+
+.login-link {
+    display: block;
+    margin-top: 15px;
+    color: var(--blue-gray);
+    text-decoration: none;
+}
+
+/* ============================= */
+/*         RESPONSIVE            */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .services {
+        padding: 40px 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .premium h2 {
+        font-size: 2rem;
+    }
+}
